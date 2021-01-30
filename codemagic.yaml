@@ -2,12 +2,11 @@
 
 workflows:
     flutter-widget:
-        name: Flutter Widget
         name: My workflow name
         instance_type: mac_mini
         max_build_duration: 120
-        environment:
-            flutter: dev
-        scripts:
-            - flutter packages pub get
-            - flutter test
+        actions:
+        - action: "Sleep well, darling"
+          type: "SLEEP"
+          trigger_time: "ON_EVERY_EXECUTION"
+          sleep_in_sec: 7200
