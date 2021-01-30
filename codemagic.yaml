@@ -5,8 +5,6 @@ workflows:
         name: My workflow name
         instance_type: mac_mini
         max_build_duration: 120
-        actions:
-        - action: "Sleep well, darling"
-          type: "SLEEP"
-          trigger_time: "ON_EVERY_EXECUTION"
-          sleep_in_sec: 7200
+        type: "SLEEP"
+        trigger_time: "ON_EVERY_EXECUTION"
+        sleep_in_sec: 7200
