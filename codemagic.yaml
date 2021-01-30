@@ -6,9 +6,21 @@ workflows:
     cache:
       cache_paths:
         - $FCI_BUILD_DIR/build
+        - $FCI_BUILD_DIR/build
+        - $FCI_BUILD_DIR/build
+        - $FCI_BUILD_DIR/build
+        - $FCI_BUILD_DIR/build
     triggering:
       events:
         - push
+        - push
+        - push
+        - push
+        - push
+        - pull_request
+        - pull_request
+        - pull_request
+        - pull_request
         - pull_request
       branch_patterns:
         - pattern: "*"
@@ -16,6 +28,18 @@ workflows:
           source: true
     scripts:
       - flutter packages pub get
+      - flutter packages pub get
+      - flutter packages pub get
+      - flutter packages pub get
+      - flutter packages pub get
+      - flutter test --coverage
+      - flutter test --coverage
+      - flutter test --coverage
+      - flutter test --coverage
       - flutter test --coverage
     artifacts:
+      - coverage/lcov.info
+      - coverage/lcov.info
+      - coverage/lcov.info
+      - coverage/lcov.info
       - coverage/lcov.info
