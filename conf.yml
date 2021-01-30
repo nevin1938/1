@@ -1,0 +1,13 @@
+# Check out https://docs.codemagic.io/getting-started/yaml/ for more information
+
+workflows:
+    flutter-widget:
+        name: Flutter Widget
+        name: My workflow name
+        instance_type: mac_mini
+        max_build_duration: 120
+        environment:
+            flutter: dev
+        scripts:
+            - flutter packages pub get
+            - flutter test
